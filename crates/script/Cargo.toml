@@ -1,0 +1,9 @@
+[package]
+name = "script"
+version.workspace = true
+edition.workspace = true
+
+[dependencies]
+core = { path = "../core" }
+mlua = { workspace = true }
+tracing = { workspace = true }

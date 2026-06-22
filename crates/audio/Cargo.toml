@@ -1,0 +1,10 @@
+[package]
+name = "audio"
+version.workspace = true
+edition.workspace = true
+
+[dependencies]
+core = { path = "../core" }
+cpal = { workspace = true }
+rustfft = { workspace = true }
+tracing = { workspace = true }

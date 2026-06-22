@@ -1,0 +1,35 @@
+# Mycelium Configuration
+# Runtime mode: Live, Studio, Render, Ambient
+mode = "Studio"
+
+[window]
+width = 1920
+height = 1080
+fullscreen = false
+vsync = false
+target_fps = 144
+
+[audio]
+# Input source: "loopback" (system audio) or "mic" (microphone)
+input = "loopback"
+# FFT size: "512", "1024", "2048", "4096"
+fft_size = "2048"
+ml_enabled = false
+
+[audio.processing]
+# EMA smoothing (0.0 = raw, 0.99 = very smooth)
+smoothing = 0.15
+# Per-band gain [sub-bass, bass, low-mid, high-mid, presence, brilliance]
+gain = [2.0, 1.5, 1.0, 1.0, 0.8, 0.6]
+# Peak hold decay rate (0.0 = instant, 0.99 = slow decay)
+peak_decay = 0.95
+# Onset detection threshold
+onset_threshold = 1.5
+# Minimum seconds between onsets
+onset_cooldown = 0.1
+
+[render]
+# MSAA samples: "1", "2", "4", "8"
+msaa = "4"
+# Internal resolution scale (0.5 = half, 1.0 = native, 2.0 = supersampled)
+internal_resolution = 1.0

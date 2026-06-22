@@ -1,0 +1,69 @@
+[workspace]
+members = [
+    "crates/core",
+    "crates/audio",
+    "crates/script",
+    "crates/shaders",
+    "crates/io",
+    "crates/app",
+]
+resolver = "2"
+
+[workspace.package]
+version = "0.1.0"
+edition = "2021"
+license = "MIT"
+authors = ["Mycelium Contributors"]
+
+[workspace.dependencies]
+# GPU (pinned to 27 for egui-wgpu 0.33 compatibility)
+wgpu = "27"
+naga = "27"
+
+# Windowing
+winit = "0.30"
+raw-window-handle = "0.6"
+
+# Audio
+cpal = "0.17"
+rustfft = "6.4"
+
+# Scripting
+mlua = { version = "0.11", features = ["lua54", "vendored", "send"] }
+
+# UI
+egui = "0.33"
+egui-wgpu = "0.33"
+egui-winit = "0.33"
+
+# Concurrency
+crossbeam = "0.8"
+parking_lot = "0.12"
+
+# Allocation-free containers
+arrayvec = "0.7"
+
+# Config & serialization
+serde = { version = "1", features = ["derive"] }
+toml = "0.8"
+
+# File watching
+notify = "7"
+
+# Input
+midir = "0.10"
+rosc = "0.11"
+gilrs = "0.11"
+
+# Logging
+tracing = "0.1"
+tracing-subscriber = { version = "0.3", features = ["env-filter"] }
+
+# Async
+pollster = "0.4"
+
+# Byte casting
+bytemuck = { version = "1", features = ["derive"] }
+
+# Error handling
+thiserror = "2"

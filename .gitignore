@@ -1,0 +1,28 @@
+/target
+*.spv
+*.o
+*.d
+*.rlib
+*.rmeta
+
+# IDE
+.idea/
+.vscode/
+*.swp
+*.swo
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Plugin builds
+plugins/*/target/
+
+.claude/
+docs/
+
+# Worktrees
+.worktrees/
+
+# Rendered output
+output/

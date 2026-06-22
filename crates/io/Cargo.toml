@@ -1,0 +1,13 @@
+[package]
+name = "io"
+version.workspace = true
+edition.workspace = true
+
+[dependencies]
+core = { path = "../core" }
+midir = { workspace = true }
+rosc = { workspace = true }
+gilrs = { workspace = true }
+crossbeam = { workspace = true }
+parking_lot = { workspace = true }
+tracing = { workspace = true }

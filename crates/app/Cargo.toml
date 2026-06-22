@@ -1,0 +1,17 @@
+[package]
+name = "app"
+version.workspace = true
+edition.workspace = true
+
+[[bin]]
+name = "mycelium"
+path = "src/main.rs"
+
+[dependencies]
+core = { path = "../core" }
+audio = { path = "../audio" }
+shaders = { path = "../shaders" }
+io = { path = "../io" }
+script = { path = "../script" }
+tracing = { workspace = true }
+tracing-subscriber = { workspace = true }
